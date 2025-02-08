@@ -1,4 +1,3 @@
-
 # Automated Gaze Orientation Estimation with the L2CS-Net model. 
 
 Overview
