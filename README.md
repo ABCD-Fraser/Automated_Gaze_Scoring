@@ -1,7 +1,3 @@
-# Automated_Gaze_Scoring
-Automated gaze orientation scoring using the L2CS-Net model
-
-
 # Automated Gaze Orientation Estimation with the L2CS-Net model. 
 
 Overview
