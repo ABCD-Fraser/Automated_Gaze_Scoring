@@ -1,5 +1,4 @@
 
-# %%
 """
 Script Overview:
 This script processes and annotates videos using the L2CS gaze estimation model.
@@ -56,7 +55,7 @@ def process_l2cs_video(input_video_path, output_video_path, participant_rows):
         participant_rows (pd.DataFrame): Updated DataFrame with L2CS scores and classifications.
     """
 
-    # Initialize the L2CS pipeline
+    # Initialise the L2CS pipeline
     gaze_pipeline = Pipeline(
         weights=pathlib.Path('models/Gaze360/L2CSNet_gaze360.pkl'),  # Path to model weights
         arch='ResNet50',  # Model architecture
@@ -65,14 +64,14 @@ def process_l2cs_video(input_video_path, output_video_path, participant_rows):
 
 
 
-        # Load video and initialize variables for frame processing
+        # Load video and initialise variables for frame processing
     video = cv2.VideoCapture(input_video_path)  # Open video file
     frames = []  # Store processed frames
     frame_results_list = []  # Store results from gaze estimation
 
     # set up progress bar and inisialise frame index and list for pitch values
     total_frames = int(video.get(cv2.CAP_PROP_FRAME_COUNT))  # Get total number of frames
-    progress_bar = tqdm(total=total_frames, desc=f"Annotating {input_video_path}", unit="frame")  # Initialize progress bar
+    progress_bar = tqdm(total=total_frames, desc=f"Annotating {input_video_path}", unit="frame")  # Initialise progress bar
     
     
 
@@ -221,7 +220,7 @@ dir_list = [output_dir, L2CS_dir, norm_dir]  # List of directories to create
 for dir in dir_list: # Create directories if they do not exist
     os.makedirs(dir, exist_ok=True)  
 
-# Initialize the output DataFrame and set path for output CSV
+# Initialise the output DataFrame and set path for output CSV
 output_df = pd.DataFrame()  
 output_df_path = os.path.join(output_dir, 'l2cs_data.csv')  
 
