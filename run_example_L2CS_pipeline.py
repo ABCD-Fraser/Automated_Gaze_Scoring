@@ -42,7 +42,7 @@ def write_video(frames, fpath):
     output_video.release()  # Release the video writer
 
 
-def process_l2cs_video(input_video_path, output_video_path, participant_rows):
+def process_l2cs_video(input_video_path, output_video_path, participant_rows, torch_device='cpu'):
     """
     Process a video to estimate gaze using the L2CS pipeline and annotate the frames.
     Args:
@@ -59,7 +59,7 @@ def process_l2cs_video(input_video_path, output_video_path, participant_rows):
     gaze_pipeline = Pipeline(
         weights=pathlib.Path('models/Gaze360/L2CSNet_gaze360.pkl'),  # Path to model weights
         arch='ResNet50',  # Model architecture
-        device=torch.device('cpu')  # Device to run the model (CPU in this case)
+        device=torch.device(torch_device)  # Device to run the model (CPU in this case)
     )
 
 
@@ -239,6 +239,8 @@ score_data = pd.read_csv(score_data_path)
 # List files in video directory
 video_files = os.listdir(input_dir) 
 
+# Set the GPU index for CUDA enabled GPU for PyTorch. If not GPU is availble set the value to 'cpu'
+GPU_index = 'cpu' 
 
 # loop through each video file in the input directory
 video_file_count = 0
@@ -264,7 +266,8 @@ for video_file in video_files:
 
         # Process the video to annotate with L2CS gaze estimation
         frame_results_list, l2cs_annotated_path, participant_rows = process_l2cs_video(input_video_path, 
-                                                                                       l2cs_annotated_path, participant_rows)
+                                                                                       l2cs_annotated_path, participant_rows, torch_device=GPU_index)
+
         
         # Annotate the video with normalised pitch values and true location
         if annotate_norm:
