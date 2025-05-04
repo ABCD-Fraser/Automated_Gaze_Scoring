@@ -21,18 +21,23 @@ This repository provides an example pipeline for processing and annotating video
 ```
 
 ## Requirements
-Ensure you have the following dependencies installed:
-- Python 3.x
-- OpenCV (`cv2`)
-- Torch (`torch`)
-- Pandas (`pandas`)
-- tqdm (`tqdm`)
+To run this project, ensure the following dependencies are installed:
+- Python (tested with version 3.13.3)
+- OpenCV: `cv2` (tested with version 4.11.0.86)
+- PyTorch: `torch` (tested with version 2.7.0) 
+- Pandas: `pandas` (tested with version 2.2.3)
+- tqdm: `tqdm` (tested with version 4.67.1)
 
-You will also need to install the [L2CS-Net package](https://github.com/Ahmednull/L2CS-Net). 
+Additionally, you will need to install the L2CS-Net package for gaze estimation.
 
-Install them using:
+### Installation
+You can install the required dependencies and the [L2CS-Net package](https://github.com/Ahmednull/L2CS-Net) using the following commands:
+
 ```sh
-pip install opencv-python torch pandas tqdm
+# Install dependencies with specific tested versions
+pip install opencv-python==4.11.0.86 torch==2.7.0 pandas==2.2.3 tqdm==4.67.1
+
+# Install the L2CS-Net package directly from GitHub
 pip install git+https://github.com/edavalosanaya/L2CS-Net.git@main
 ```
 
