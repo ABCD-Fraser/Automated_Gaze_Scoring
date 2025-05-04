@@ -28,9 +28,12 @@ Ensure you have the following dependencies installed:
 - Pandas (`pandas`)
 - tqdm (`tqdm`)
 
+You will also need to install the [L2CS-Net package](https://github.com/Ahmednull/L2CS-Net). 
+
 Install them using:
 ```sh
 pip install opencv-python torch pandas tqdm
+pip install git+https://github.com/edavalosanaya/L2CS-Net.git@main
 ```
 
 ## Example Usage
@@ -56,7 +59,7 @@ estimation and relative location of target.
 ## Notes
 - The model weights have been provided and are located inside the `models/` directory.
 - The model weights have been provided by [Abdelrahman, Hempel, Khalifa, Al-Hamadi, 2023](https://ieeexplore.ieee.org/document/10372944) and can be found on the [L2CS-Net repo](https://github.com/Ahmednull/L2CS-Net).  
-- The script defaults to using a CPU; modify it to use a GPU if available.
+- The script defaults to using a CPU. If you have a CUDA enabled GPU, this can be activated by setting the `GPU_index` variable in the `run_example_l2cs_pipeiline.py` to the GPU device id. 
 
 ## License
 This project is open-source under the MIT License.
