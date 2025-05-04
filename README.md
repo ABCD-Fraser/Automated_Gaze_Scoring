@@ -33,9 +33,12 @@ Install them using:
 pip install opencv-python torch pandas tqdm
 ```
 
-## Usage
-1. Place input videos inside the `input/video/` folder.
-2. Ensure `scoring_data.csv` is present in `input/` with participant scoring information.
+## Example Usage
+
+To demonstrate the functionality of the script a set of exmple videos and associated scoring have been provided. All example videos have been provided by researchers invovled in the study, and they have provided consent for their use as examples. 
+
+1. Ensure example input videos are inside the `input/video/` directory.
+2. Ensure `scoring_data.csv` is present in `input/` directory with example participant scoring information.
 3. Run the main processing script:
    ```sh
    python run_example_L2CS_pipeline.py
@@ -44,14 +47,15 @@ pip install opencv-python torch pandas tqdm
 
 ## Functionality
 - **Frame Extraction & Processing:** Extracts frames from input videos.
-- **Gaze Estimation:** Uses L2CS to estimate gaze direction.
+- **Gaze Estimation:** Uses L2CS-Net to estimate gaze direction.
 - **Annotation:** Annotates frames with gaze direction markers. Outputs the L2CS annotated videos.
 - **Normalisation:** Normalises pitch values for visualisation. Outputs videos annotated with normalised L2CS gaze 
 estimation and relative location of target. 
 - **CSV Output:** Saves frame-wise gaze estimations for further analysis.
 
 ## Notes
-- The model weights should be placed inside the `models/` directory.
+- The model weights have been provided and are located inside the `models/` directory.
+- The model weights have been provided by [Abdelrahman, Hempel, Khalifa, Al-Hamadi, 2023](https://ieeexplore.ieee.org/document/10372944) and can be found on the [L2CS-Net repo](https://github.com/Ahmednull/L2CS-Net).  
 - The script defaults to using a CPU; modify it to use a GPU if available.
 
 ## License
