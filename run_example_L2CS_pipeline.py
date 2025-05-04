@@ -289,5 +289,3 @@ output_df.to_csv(output_df_path, index=False)
 
 # Print total execution time
 print(f"Finished processing all videos. Total time: {time.time() - start_time:.2f} seconds")
-
-# %%
