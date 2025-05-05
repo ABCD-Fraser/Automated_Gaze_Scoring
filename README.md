@@ -13,11 +13,11 @@ This repository provides an example pipeline for processing and annotating video
 │   ├── scoring_data.csv # Corresponding scoring file for the videos
 ├── output/
 │   ├── L2CS_annotation/    # Folder for L2CS-annotated videos
-│   ├── normalised_annotation/ # Folder for normalized annotated videos
+│   ├── normalised_annotation/ # Folder for normalised annotated videos
 │   ├── l2cs_data.csv # Output file with frame-wise analysis
 ├── process_videos.py  # Main script for processing videos
-├── models/            # Folder for L2CS model weights (not included)
-└── README.md          # This file
+└── models/            # Folder for L2CS model weights
+
 ```
 
 ## Requirements
@@ -64,7 +64,7 @@ estimation and relative location of target.
 ## Notes
 - The model weights have been provided and are located inside the `models/` directory.
 - The model weights have been provided by [Abdelrahman, Hempel, Khalifa, Al-Hamadi, 2023](https://ieeexplore.ieee.org/document/10372944) and can be found on the [L2CS-Net repo](https://github.com/Ahmednull/L2CS-Net).  
-- The script defaults to using a CPU. If you have a CUDA enabled GPU, this can be activated by setting the `GPU_index` variable in the `run_example_l2cs_pipeiline.py` to the GPU device id. 
+- The script defaults to using the CPU. If you have a CUDA enabled GPU, this can be activated by setting the `GPU_index` variable in the `run_example_l2cs_pipeiline.py` to the GPU device id. 
 
 ## License
 This project is open-source under the MIT License.
