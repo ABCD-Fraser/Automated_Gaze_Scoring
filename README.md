@@ -33,10 +33,8 @@ Additionally, you will need to install the L2CS-Net package for gaze estimation.
 You can install the required dependencies (with tested versions) and the [L2CS-Net package](https://github.com/Ahmednull/L2CS-Net) using the following commands:
 
 ```sh
-# Install dependencies with specific tested versions
 pip install opencv-python==4.11.0.86 torch==2.7.0 pandas==2.2.3 tqdm==4.67.1
 
-# Install the L2CS-Net package directly from GitHub
 pip install git+https://github.com/edavalosanaya/L2CS-Net.git@main
 ```
 
