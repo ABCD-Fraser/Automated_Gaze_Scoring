@@ -1,8 +1,7 @@
 # Automated Gaze Orientation Estimation with the L2CS-Net model. 
 
-Overview
 
-This repository provides an example pipeline for processing and annotating videos using the L2CS gaze estimation model. The script extracts frames from input videos, applies gaze estimation, normalizes scores, and annotates the frames with visual markers. The processed videos are saved for inspection, and frame-by-frame annotations are exported as a CSV file for further analysis.
+This repository provides an example pipeline for processing and annotating videos using the L2CS gaze estimation model. The script extracts frames from input videos, applies gaze estimation, normalises scores, and annotates the frames with visual markers. The processed videos are saved for inspection, and frame-by-frame annotations are exported as a CSV file for further analysis.
 
 
 ## Repository Structure
@@ -31,7 +30,7 @@ To run this project, ensure the following dependencies are installed:
 Additionally, you will need to install the L2CS-Net package for gaze estimation.
 
 ### Installation
-You can install the required dependencies and the [L2CS-Net package](https://github.com/Ahmednull/L2CS-Net) using the following commands:
+You can install the required dependencies (with tested versions) and the [L2CS-Net package](https://github.com/Ahmednull/L2CS-Net) using the following commands:
 
 ```sh
 # Install dependencies with specific tested versions
