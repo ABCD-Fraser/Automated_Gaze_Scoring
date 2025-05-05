@@ -1,2 +1,3 @@
 output/L2CS_annotation/*.mp4
 output/normalised_annotation/*.mp4
+output/l2cs_data.csv
