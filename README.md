@@ -35,7 +35,7 @@ You can install the required dependencies (with tested versions) and the [L2CS-N
 ```sh
 pip install opencv-python==4.11.0.86 torch==2.7.0 pandas==2.2.3 tqdm==4.67.1
 
-pip install git+https://github.com/edavalosanaya/L2CS-Net.git@main
+pip install git+https://github.com/Ahmednull/L2CS-Net.git@main
 ```
 
 ## Example Usage
